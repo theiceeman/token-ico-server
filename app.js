@@ -4,6 +4,11 @@ const corsOptions = require("./lib/cors");
 const app = express();
 require("dotenv").config();
 
+
+//EXPRESS CONFIGURE
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
 app.use(cors(corsOptions));
 
 // routes
